@@ -1,0 +1,17 @@
+sudo docker run --detach \
+    --publish 443:443 --publish 8080:80 --publish 23:22 \
+    --name gitlab \
+    --restart always \
+    --volume /srv/gitlab/config:/etc/gitlab \
+    --volume /srv/gitlab/logs:/var/log/gitlab \
+    --volume /srv/gitlab/data:/var/opt/gitlab \
+    gitlab/gitlab-ce:latest
+
+
+
+docker service create \
+  --replicas 10 \
+  --name ci -p 80:80\
+  --update-delay 10s \
+  --update-parallelism 2 \
+ ef65d9d7/ci_cd_workshop:latest
