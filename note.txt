@@ -1,0 +1,9 @@
+https://www.scaleway.com/
+
+https://github.com/DariuszLuber/CI_CD_Workshop
+
+https://gist.github.com/DariuszLuber/6df91251f999f75fa587896047df7c16
+
+http://play-with-docker.com
+
+https://katacoda.com/learn
